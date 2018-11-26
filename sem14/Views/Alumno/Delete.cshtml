@@ -1,0 +1,95 @@
+﻿@model sem14.Models.AlumnoModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <h4>AlumnoModel</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.codalu)
+                <div class="form-group">
+                    @Html.LabelFor(model => model.codalu, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.codalu, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.codalu, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.codalu)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.nomalu)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.nomalu)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.telefono)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.telefono)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.codcar)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.codcar)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.fecha_ins)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.fecha_ins)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.estado)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.estado)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Fotoalu)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Fotoalu)
+            </dd>
+
+        </dl>
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

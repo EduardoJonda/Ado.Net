@@ -1,0 +1,74 @@
+﻿@model IEnumerable<sem14.Models.AlumnoModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.codalu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nomalu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.codcar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha_ins)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fotoalu)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.codalu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nomalu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.codcar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha_ins)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fotoalu)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Details", new {  id=item.codalu }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.codalu })
+        </td>
+    </tr>
+}
+
+</table>
